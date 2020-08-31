@@ -13,7 +13,11 @@ module.exports = {
 			name: 'Support Guild',
 			value: 'https://discord.gg/WcBzBDA',
 		},
-		request: 'Requested By',
+		request: 'Requested By:',
+	},
+	not_owner_embed: {
+		description: ':x: Sorry! You cannot execute this command! You are not the owner of the GitHub account associated with this bot',
+		request: 'Requested By:',
 	},
 	version: 'v1.0.0',
 };
