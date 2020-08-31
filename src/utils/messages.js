@@ -46,5 +46,9 @@ module.exports = {
 			name: 'Clone URL',
 		},
 	},
+	repo_deleted: {
+		description: 'has been deleted',
+	},
 	version: 'v1.0.0',
+	requested_by: 'Requested By:',
 };

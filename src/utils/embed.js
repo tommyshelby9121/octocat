@@ -1,6 +1,6 @@
 'use strict';
 const { MessageEmbed } = require('discord.js');
-const { help_embed, not_owner_embed, no_repo_name_embed, repo_created, version } = require('./messages');
+const { help_embed, not_owner_embed, no_repo_name_embed, repo_created, repo_deleted, version, requested_by } = require('./messages');
 const { success, error } = require('./colors');
 
 function helpEmbed(client, message) {
@@ -62,9 +62,20 @@ function repoCreated(client, message, res) {
 	message.channel.send(embed);
 }
 
+function repoDeleted(client, message, repoName) {
+	const embed = new MessageEmbed()
+		.setDescription(repoName + ' ' + repo_deleted.description)
+		.setColor(success)
+		.setTimestamp()
+		.setFooter(`${client.user.username} ${version} | ${requested_by}`, message.author.displayAvatarURL());
+
+	message.channel.send(embed);
+}
+
 module.exports = {
 	helpEmbed,
 	notOwnerEmbed,
 	noRepoNameEmbed,
 	repoCreated,
+	repoDeleted,
 };
