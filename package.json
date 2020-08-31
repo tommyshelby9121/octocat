@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/tommyshelby9121/octocat/issues"
   },
-  "homepage": "https://github.com/tommyshelby9121/octocat#readme"
+  "homepage": "https://github.com/tommyshelby9121/octocat#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "github-api": "^3.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "nodemon": "^2.0.4"
+  }
 }
