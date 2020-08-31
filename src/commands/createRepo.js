@@ -18,11 +18,20 @@ module.exports = {
 			noRepoNameEmbed(client, message);
 		}
 		const repoVisibility = args[1];
-		if (!repoVisibility) {
+		if (!repoVisibility || repoVisibility === false) {
 			const user = github.getUser();
 			user.createRepo({
 				name: repoName,
 				private: false,
+			}).then((res) => {
+				repoCreated(client, message, res);
+			});
+		}
+		else if (repoVisibility === true) {
+			const user = github.getUser();
+			user.createRepo({
+				name: repoName,
+				private: true,
 			}).then((res) => {
 				repoCreated(client, message, res);
 			});
