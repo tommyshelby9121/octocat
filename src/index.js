@@ -11,6 +11,11 @@ const client = new Client({
 	prefix: process.env.BOT_PREFIX,
 });
 
+const GitHub = require('github-api');
+const github = new GitHub({
+	token: process.env.GITHUB_TOKEN,
+});
+
 const commandFiles = readdirSync(join(__dirname, 'commands')).filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
 	const command = require(join(__dirname, 'commands', `${file}`));
@@ -36,7 +41,7 @@ client.on('message', message => {
 	}
 
 	try {
-		command.execute(client, message, args);
+		command.execute(client, message, args, github);
 	}
 	catch (error) {
 		console.error(error);
