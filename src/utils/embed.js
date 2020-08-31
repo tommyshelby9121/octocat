@@ -1,7 +1,7 @@
 'use strict';
 const { MessageEmbed } = require('discord.js');
-const { help_embed, version } = require('./messages');
-const { success } = require('./colors');
+const { help_embed, not_owner_embed, version } = require('./messages');
+const { success, error } = require('./colors');
 
 function helpEmbed(client, message) {
 	const embed = new MessageEmbed()
@@ -10,7 +10,17 @@ function helpEmbed(client, message) {
 		.setColor(success)
 		.addField(help_embed.command_list_field.name, help_embed.command_list_field.value)
 		.addField(help_embed.support_guild_field.name, help_embed.support_guild_field.value)
-		.setFooter(`${client.user.username} ${version} | ${help_embed.request}: ${message.author.tag}`, message.author.displayAvatarURL());
+		.setFooter(`${client.user.username} ${version} | ${help_embed.request} ${message.author.tag}`, message.author.displayAvatarURL());
+
+	message.channel.send(embed);
+}
+
+function notOwnerEmbed(client, message) {
+	const embed = new MessageEmbed()
+		.setDescription(not_owner_embed.description)
+		.setColor(error)
+		.setTimestamp()
+		.setFooter(`${client.user.username} ${version} | ${not_owner_embed.request} ${message.author.tag}`, message.author.displayAvatarURL());
 
 	message.channel.send(embed);
 }
