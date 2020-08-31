@@ -1,0 +1,24 @@
+{
+  "name": "octocat",
+  "version": "1.0.0",
+  "description": "A discord bot to interact with the github api",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommyshelby9121/octocat.git"
+  },
+  "keywords": [
+    "discordjs",
+    "nodejs",
+    "discord-api"
+  ],
+  "author": "tommyshelby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tommyshelby9121/octocat/issues"
+  },
+  "homepage": "https://github.com/tommyshelby9121/octocat#readme"
+}
