@@ -25,7 +25,26 @@ module.exports = {
 			name: 'Usage',
 			value: '$createrepo foobar private',
 		},
-		request: 'Requested By:'
+		request: 'Requested By:',
+	},
+	repo_created: {
+		title: 'Repository Created',
+		description: 'Your repository has been created! Here is some information!',
+		repo_name_field: {
+			name: 'Repository Name',
+		},
+		repo_visibility_field: {
+			name: 'Repository Visibility',
+		},
+		git_url_field: {
+			name: 'Git URL',
+		},
+		ssh_url_field: {
+			name: 'SSH URL',
+		},
+		clone_url_field: {
+			name: 'Clone URL',
+		},
 	},
 	version: 'v1.0.0',
 };
