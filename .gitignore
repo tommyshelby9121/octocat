@@ -5,3 +5,6 @@ package-lock.json
 
 # Env
 .env
+
+# GitHub Response
+github_response_template/
