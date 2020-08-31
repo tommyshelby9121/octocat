@@ -1,6 +1,6 @@
 'use strict';
 const { MessageEmbed } = require('discord.js');
-const { help_embed, not_owner_embed, version } = require('./messages');
+const { help_embed, not_owner_embed, no_repo_name_embed, version } = require('./messages');
 const { success, error } = require('./colors');
 
 function helpEmbed(client, message) {
@@ -25,6 +25,19 @@ function notOwnerEmbed(client, message) {
 	message.channel.send(embed);
 }
 
+function noRepoNameEmbed(client, message) {
+	const embed = new MessageEmbed()
+		.setDescription(no_repo_name_embed.description)
+		.setColor(error)
+		.addField(no_repo_name_embed.usage_field.name, no_repo_name_embed.usage_field.value)
+		.setTimestamp()
+		.setFooter(`${client.user.username} ${version} | `, message.author.displayAvatarURL());
+
+	message.channel.send(embed);
+}
+
 module.exports = {
 	helpEmbed,
+	notOwnerEmbed,
+	noRepoNameEmbed,
 };

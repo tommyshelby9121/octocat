@@ -19,5 +19,13 @@ module.exports = {
 		description: ':x: Sorry! You cannot execute this command! You are not the owner of the GitHub account associated with this bot',
 		request: 'Requested By:',
 	},
+	no_repo_name_embed: {
+		description: ':x: Sorry! Please provide a name for the repository!',
+		usage_field: {
+			name: 'Usage',
+			value: '$createrepo foobar private',
+		},
+		request: 'Requested By:'
+	},
 	version: 'v1.0.0',
 };
