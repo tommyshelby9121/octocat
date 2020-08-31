@@ -12,12 +12,10 @@ module.exports = {
 		support_guild_field: {
 			name: 'Support Guild',
 			value: 'https://discord.gg/WcBzBDA',
-		},
-		request: 'Requested By:',
+		}
 	},
 	not_owner_embed: {
 		description: ':x: Sorry! You cannot execute this command! You are not the owner of the GitHub account associated with this bot',
-		request: 'Requested By:',
 	},
 	no_repo_name_embed: {
 		description: ':x: Sorry! Please provide a name for the repository!',
@@ -25,7 +23,6 @@ module.exports = {
 			name: 'Usage',
 			value: '$createrepo foobar private',
 		},
-		request: 'Requested By:',
 	},
 	repo_created: {
 		title: 'Repository Created',
