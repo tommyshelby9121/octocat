@@ -47,7 +47,7 @@ module.exports = {
 		description: 'has been deleted',
 	},
 	user_info: {
-		description: '**Bio**',
+		description: '**Bio:**',
 		name_field: {
 			name: 'Name',
 		},
