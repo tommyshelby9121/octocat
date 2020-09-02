@@ -1,6 +1,6 @@
 'use strict';
 const { MessageEmbed } = require('discord.js');
-const { help_embed, not_owner_embed, no_repo_name_embed, repo_created, repo_deleted, version, requested_by } = require('./messages');
+const { help_embed, not_owner_embed, no_repo_name_embed, repo_created, repo_deleted, user_info, version, requested_by } = require('./messages');
 const { success, error } = require('./colors');
 
 function helpEmbed(client, message) {
@@ -72,10 +72,35 @@ function repoDeleted(client, message, repoName) {
 	message.channel.send(embed);
 }
 
+function userInfo(client, message, profile) {
+	let company = profile.company;
+	let location = profile.location;
+	if (company === null || company === undefined) company = 'N/A';
+	if (location === null || location === undefined) location = 'N/A';
+	const embed = new MessageEmbed()
+		.setTitle(profile.login)
+		.setDescription(user_info.description + ' ' + `_${profile.bio}_`)
+		.setColor(success)
+		.addField(user_info.name_field.name, profile.name, true)
+		.addField(user_info.company_field.name, company, true)
+		.addField(user_info.location_field.name, location, true)
+		.addField(user_info.public_repos_field.name, profile.public_repos, true)
+		.addField(user_info.public_gists_field.name, profile.public_gists, true)
+		.addField(user_info.followers_field.name, profile.followers, true)
+		.addField(user_info.following_field.name, profile.following, true)
+		.setThumbnail(profile.avatar_url)
+		.setURL(profile.html_url)
+		.setTimestamp()
+		.setFooter(`${client.user.username} | ${requested_by} ${message.author.tag}`, message.author.displayAvatarURL());
+
+	message.channel.send(embed);
+}
+
 module.exports = {
 	helpEmbed,
 	notOwnerEmbed,
 	noRepoNameEmbed,
 	repoCreated,
 	repoDeleted,
+	userInfo,
 };
