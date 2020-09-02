@@ -1,6 +1,6 @@
 # 🔨 Setting up the bot
 
-> **Note:** This bot is made to be run/hosted by yourself on your own server. To keep it online, you must keep the bot process running. If you are unsure on how to host the bot, please check out [hosting octocat]() for a in-depth tutorial.
+> **Note:** This bot is made to be run/hosted by yourself on your own server. To keep it online, you must keep the bot process running. If you are unsure on how to host the bot, please check out [hosting octocat](https://github.com/tommyshelby9121/octocat/blob/master/docs/hosting.md) for a in-depth tutorial.
 
 ## Prerequisites
 1. Create a bot application via the [Discord Developer Portal](https://discord.com/developers/application) 
