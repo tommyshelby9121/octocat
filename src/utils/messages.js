@@ -60,14 +60,8 @@ module.exports = {
 		public_repos_field: {
 			name: 'Public Repositories',
 		},
-		private_repos_field: {
-			name: 'Private Repositories',
-		},
 		public_gists_field: {
 			name: 'Public Gists',
-		},
-		private_gists_field: {
-			name: 'Private Gists',
 		},
 		followers_field: {
 			name: 'Followers',
