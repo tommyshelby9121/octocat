@@ -46,6 +46,9 @@ module.exports = {
 	repo_deleted: {
 		description: 'has been deleted',
 	},
+	no_user: {
+		description: ':x: Sorry! That user does not exist!'
+	},
 	user_info: {
 		description: '**Bio:**',
 		name_field: {
