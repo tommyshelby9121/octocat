@@ -1,5 +1,7 @@
 # 🤖 Commands
 
+> **Warning:** Rate limiting is not implemented on this bot.
+
 ## Prerequisites
 Anything in between `<>` means required and anything in between `[]` means optional.
 
