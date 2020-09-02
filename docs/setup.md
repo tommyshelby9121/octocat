@@ -9,6 +9,7 @@
 3. [Install Node.js](https://nodejs.org/en/) version 12 or higher.
     - Anything below Node.js v12 is unsupported. I recommend using a stable version
 4. Download the latest version of the bot from the releases page and extract it to a folder
+    - The `master` branch is where new code is pushed to, and may contain a few bugs. Most of the times when a release is made, the bugs will be ironed out.
 5. In the bot's folder, make a copy of `.env.example` and rename the copy to `.env`
 
 ## Environment File
