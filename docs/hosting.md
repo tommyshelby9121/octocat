@@ -10,12 +10,12 @@ We will be going over on how to host the bot by yourself on a VPS (Virtual Priva
 3. Have SSH setup on the VPS for maximum protection and not use root user. Please check out [this article](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04) if you're unsure how to create new users.
 
 ### Update Repositories List
-```sh
+```css
 sudo apt update
 ```
 
 ### Installing Node.js v12
-```sh
+```css
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 sudo apt install nodejs
@@ -27,14 +27,14 @@ Run the last command to see if the latest update of Node.js version 12 is instal
 
 ### Getting OctoCat Code
 Here, I will be downloading OctoCat to the `/bin` folder, but feel free to do it anywhere you like.
-```sh
+```css
 cd /bin
 
 git clone https://github.com/tommyshelby9121/octocat.git
 ```
 
 ### Installing Project Dependencies
-```sh
+```css
 cd octocat
 
 npm install
@@ -47,7 +47,7 @@ ctrl+C
 ```
 
 ### Setup PM2 process manager
-```sh
+```css
 sudo npm i pm2 -g
 
 pm2 start src/index
