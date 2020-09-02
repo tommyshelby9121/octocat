@@ -73,13 +73,15 @@ function repoDeleted(client, message, repoName) {
 }
 
 function userInfo(client, message, profile) {
+	let bio = profile.bio;
 	let company = profile.company;
 	let location = profile.location;
+	if (bio === null || company === undefined) bio = 'N/A';
 	if (company === null || company === undefined) company = 'N/A';
 	if (location === null || location === undefined) location = 'N/A';
 	const embed = new MessageEmbed()
 		.setTitle(profile.login)
-		.setDescription(user_info.description + ' ' + `_${profile.bio}_`)
+		.setDescription(user_info.description + ' ' + `_${bio}_`)
 		.setColor(success)
 		.addField(user_info.name_field.name, profile.name, true)
 		.addField(user_info.company_field.name, company, true)
