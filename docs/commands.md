@@ -3,9 +3,11 @@
 > **Warning:** Rate limiting is not implemented on this bot.
 
 ## Prerequisites
+
 Anything in between `<>` means required and anything in between `[]` means optional.
 
 ## Getting User Info
+
 In order to get user information from github with OctoCat you can do the following;
 
 ### `!userinfo <username>`
@@ -14,9 +16,10 @@ Here, the first and only parameter is the username of the user whose information
 
 Example: `!userinfo tommyshelby9121`
 
-This gets all the publicly information available and is sorted and displayed by relevance.
+This gets all the publicly information available for the user `tommyshelby9121` and is sorted and displayed by relevance.
 
 ## Creating Repositories
+
 In order to create a repository with OctoCat, you can do the following;
 
 ### `!createrepo <name> [visibility]`
