@@ -12,7 +12,7 @@ module.exports = {
 		support_guild_field: {
 			name: 'Support Guild',
 			value: 'https://discord.gg/WcBzBDA',
-		}
+		},
 	},
 	not_owner_embed: {
 		description: ':x: Sorry! You cannot execute this command! You are not the owner of the GitHub account associated with this bot',
@@ -45,6 +45,36 @@ module.exports = {
 	},
 	repo_deleted: {
 		description: 'has been deleted',
+	},
+	user_info: {
+		description: '**Bio**',
+		name_field: {
+			name: 'Name',
+		},
+		company_field: {
+			name: 'Company',
+		},
+		location_field: {
+			name: 'Location',
+		},
+		public_repos_field: {
+			name: 'Public Repositories',
+		},
+		private_repos_field: {
+			name: 'Private Repositories',
+		},
+		public_gists_field: {
+			name: 'Public Gists',
+		},
+		private_gists_field: {
+			name: 'Private Gists',
+		},
+		followers_field: {
+			name: 'Followers',
+		},
+		following_field: {
+			name: 'Following',
+		},
 	},
 	version: 'v1.0.0',
 	requested_by: 'Requested By:',
