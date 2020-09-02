@@ -23,7 +23,8 @@ module.exports = {
 			user.createRepo({
 				name: repoName,
 				private: false,
-			}).then((res) => {
+			}).then(async (res) => {
+				await message.react('✅');
 				repoCreated(client, message, res);
 			});
 		}
@@ -32,7 +33,8 @@ module.exports = {
 			user.createRepo({
 				name: repoName,
 				private: true,
-			}).then((res) => {
+			}).then(async (res) => {
+				await message.react('✅');
 				repoCreated(client, message, res);
 			});
 		}

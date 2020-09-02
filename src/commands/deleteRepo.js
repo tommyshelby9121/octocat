@@ -20,7 +20,8 @@ module.exports = {
 		}
 		const user = process.env.GITHUB_USERNAME;
 		const repo = github.getRepo(user, repoName);
-		repo.deleteRepo().then(() => {
+		repo.deleteRepo().then(async () => {
+			await message.react('✅');
 			repoDeleted(client, message, repoName);
 		});
 	},
